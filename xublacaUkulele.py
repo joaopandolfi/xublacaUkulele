@@ -4,6 +4,7 @@ Xublaca Ukulele
 Afinador para Ukulele
 """
 
+import sys
 import pyaudio
 from wave import struct as wave_struct
 from numpy import blackman
@@ -214,6 +215,19 @@ if __name__ == '__main__':
     lowA =  [['A',220],['D',294],['F#',370],['B',494]]
     lowG =  [['G',196],['C',262],['E',330],['B',440]]
 
+    param = sys.argv[1:]
+
     u = UkeTuner()
-    u.setTune(lowA, "A Baixo")
+    if(len(param) == 1):
+        if(param[0] == "b" or param == "baritone"):
+            u.setTune(baritone,"Baritono")
+        elif(param[0] == "d" or param == "dtunning"):
+            u.setTune(dTuning,"D")
+        elif(param[0] == "a" or param == "lowa"):
+            u.setTune(lowA, "A Baixo")
+        elif(param[0] == "g" or param == "lowg"):
+            u.setTune(lowG, "G Baixo")
+        else:
+            print "Parametro invalido"
+            exit()
     u.tune()
