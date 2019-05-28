@@ -16,7 +16,7 @@ pip install pyaudio
 
 ```
     +---------------------------------+
-    | Ukulele |   Tamanho da nota     |
+    | Ukulele |    Número da nota     |
     |   Tom   |  4  |  3  |  2  |  1  |
     +---------------------------------+
     |Standard | 392 | 262 | 330 | 440 |
