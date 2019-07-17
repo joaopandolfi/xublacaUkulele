@@ -63,5 +63,8 @@ $ python xublacaUkulele.py g
 ```
 
 
+## Definir como linha de comando
+Copie para a pasta **/usr/local/bin**
+
 # Maintener
 * João Carlos Pandolfi Santana
